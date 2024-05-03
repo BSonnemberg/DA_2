@@ -1,9 +1,7 @@
 #include "Vertex.h"
 #include "Edge.h"
 
-Vertex::Vertex(const int& index) {
-    this->index = index;
-}
+Vertex::Vertex(const Location& info) : info(info) {}
 
 Vertex::~Vertex() {
     for (const Edge* e : out) {
@@ -11,8 +9,12 @@ Vertex::~Vertex() {
     }
 }
 
-int Vertex::getIndex() const {
-    return this->index;
+Location Vertex::getInfo() const {
+    return this->info;
+}
+
+int Vertex::getId() const {
+    return this->info.getId();
 }
 
 const std::vector<Edge*>& Vertex::getOutEdges() const {

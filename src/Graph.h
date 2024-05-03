@@ -9,9 +9,9 @@ public:
     ~Graph();
     Graph(const Graph& g);
     const std::vector<Vertex*>& getNodes() const;
-    Vertex* findVertex(const int& index) const;
+    Vertex* findVertex(const int& id) const;
     bool addVertex(Vertex* v);
-    bool removeVertex(const int& index);
+    bool removeVertex(const int& id);
 };
 
 #endif

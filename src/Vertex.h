@@ -1,18 +1,20 @@
 #ifndef VERTEX_H
 #define VERTEX_H
 
+#include "Location.h"
 #include <vector>
 
 class Edge;
 
 class Vertex {
-    int index;
+    Location info;
     std::vector<Edge*> out;
     std::vector<Edge*> in;
 public:
     ~Vertex();
-    explicit Vertex(const int& index);
-    int getIndex() const;
+    explicit Vertex(const Location& info);
+    Location getInfo() const;
+    int getId() const; // shortcut
     const std::vector<Edge*>& getOutEdges() const;
     const std::vector<Edge*>& getInEdges() const;
     Edge* addEdgeTo(Vertex* to, const double& weight);
