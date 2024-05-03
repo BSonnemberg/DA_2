@@ -17,6 +17,7 @@ set(CPP_FILES
         src/Graph.cpp
         src/DataLoader.cpp
         src/main.cpp
+        src/Location.cpp
 )
 
 add_executable(shipping-route-optim ${H_FILES} ${CPP_FILES})

@@ -3,6 +3,7 @@
 
 #include "Location.h"
 #include <vector>
+#include <string>
 
 class Edge;
 
